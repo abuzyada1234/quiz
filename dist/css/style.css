@@ -45,6 +45,11 @@
     outline: none;
   }
   
+  .welcome_form input::placeholder {
+    color: white;
+    font-size: 12px;
+    opacity: 50%;
+  }
   .welcome_form button {
     padding: 20px 0;
     border: none;
@@ -166,7 +171,3 @@
     margin-top: 15px;
     transition: 0.4s; 
   }
-  .wrapper :hover
-  {
-    transform: translateY(-5px);
-  } 
