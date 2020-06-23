@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tolobo Quiz</title>
+    <link rel="stylesheet" href="dist/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div>
+            <i class="fas fa-award award_icon"></i>
+            <h3 class="username">Well Done! <span class="name"></span></h3>
+            <p class="userpoints">Your Points: <span class="points"></span></p>
+            <p class="usertime">Time Taken <span class="time_taken" ></span></p>
+        </div>
+    </div>
+    <script>
+        window.onload =function(){
+            postToGoogle();
+        }
+        function postToGoogle() {
+            $.ajax({
+                    url: "https://docs.google.com/forms/d/e/1FAIpQLSfGnHYRyj0VlZM2epRCAyjRbzcMVA5-fc7LyytUc492Y4EbqA",
+                    data: {"entry.1865342532": name, "entry.1641737382": points, 
+                    "entry.1746833508": time_taken},
+                    type: "POST",
+                    dataType: "xml"
+            });
+				return false;
+            }
+</script>
+    <script src="https://kit.fontawesome.com/aba49aa9a3.js" crossorigin="anonymous"></script>
+    <script src="dist/js/userinfo.js"></script>
+    <script src="dist/js/timer.js"></script>
+
+</body>
+</html>
