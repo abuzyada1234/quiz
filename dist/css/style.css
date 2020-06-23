@@ -44,11 +44,17 @@
   .welcome_form input:focus {
     outline: none;
   }
+
+  .welcome_form input::-webkit-outer-spin-button, input::-webkit-inner-spin-button
+  {
+    -webkit-appearance: none;
+  }
+  
   
   .welcome_form input::placeholder {
     color: white;
     font-size: 12px;
-    opacity: 50%;
+    opacity: 90%;
   }
   .welcome_form button {
     padding: 20px 0;
